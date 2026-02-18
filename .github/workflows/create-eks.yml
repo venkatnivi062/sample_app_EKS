@@ -23,8 +23,8 @@ jobs:
 
     - name: Create EKS cluster
       run: |
-        eksctl create cluster \
-          --name demo-cluster \
-          --region $AWS_REGION \
-          --nodes 2 \
-          --node-type t3.medium
+        eksctl create cluster -f cluster.yaml
+          #--name demo-cluster \
+          #--region $AWS_REGION \
+          #--nodes 2 \
+          #--node-type t3.medium
