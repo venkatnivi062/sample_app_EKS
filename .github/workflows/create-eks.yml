@@ -1,13 +1,17 @@
 name: Create EKS Cluster
 
 on:
-  workflow_dispatch:   # manual trigger only
+  workflow_dispatch:
 
 jobs:
   create-cluster:
     runs-on: ubuntu-latest
 
     steps:
+    # This step ensures cluster.yaml is available in the runner
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
@@ -24,7 +28,3 @@ jobs:
     - name: Create EKS cluster
       run: |
         eksctl create cluster -f cluster.yaml
-          #--name demo-cluster \
-          #--region $AWS_REGION \
-          #--nodes 2 \
-          #--node-type t3.medium
