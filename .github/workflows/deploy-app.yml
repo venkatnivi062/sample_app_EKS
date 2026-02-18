@@ -1,9 +1,10 @@
 name: Deploy Application to EKS
 
 on:
-  push:
-    branches: [ "main" ]
+  #push:
+   branches: [ "main" ] 
   workflow_dispatch:   # manual trigger also
+  
 
 jobs:
   deploy-app:
