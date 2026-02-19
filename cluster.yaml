@@ -3,18 +3,14 @@ kind: ClusterConfig
 
 metadata:
   name: demo-cluster
-  region: ap-south-1
-
-availabilityZones: ["ap-south-1a", "ap-south-1b"]
+  region: us-east-1
 
 managedNodeGroups:
   - name: ng-default
     instanceTypes:
-      - t3.large
       - t3.medium
       - t3a.medium
-      - m5.large
+      - t3.large
     desiredCapacity: 1
     minSize: 1
     maxSize: 2
-
