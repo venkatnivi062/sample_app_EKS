@@ -5,10 +5,7 @@ metadata:
   name: demo-eks
   region: us-east-1
 
-managedNodeGroups:
+nodeGroups:
   - name: ng-1
     instanceType: t3.micro
     desiredCapacity: 1
-    minSize: 1
-    maxSize: 1
-    volumeSize: 20
