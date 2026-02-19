@@ -9,7 +9,7 @@ availabilityZones: ["ap-south-1a", "ap-south-1b"]
 
 nodeGroups:
   - name: ng-default
-    instanceType: t3.medium
+    instanceType: t2.micro
     desiredCapacity: 2
     minSize: 2
     maxSize: 4
