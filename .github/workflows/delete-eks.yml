@@ -23,4 +23,4 @@ jobs:
 
     - name: Delete cluster
       run: |
-        eksctl delete cluster --region $AWS_REGION --name demo-cluster
+        eksctl delete cluster --region $AWS_REGION --name sample-helm-cluster
